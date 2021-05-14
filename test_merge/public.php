@@ -8,14 +8,14 @@ if (!defined('APPLICATION_ENV')) {
 $config = [
     
 //     开发
-    /* 'database'                         => [
+    'database'                         => [
         'adapter'  => 'Mysql',
         'host'     => '192.168.0.100',
         'username' => 'root',
         'password' => '123456',
         'dbname'   => 'hkpay',
         'charset'  => 'utf8',
-    ], */
+    ],
     'redis'                            => [
         'default' => [
             'host'     => '127.0.0.1',
@@ -34,9 +34,6 @@ $config = [
         'return_url'    => 'http://summer.blueoceantech.co/wechat/payment/entry',
         /* 'certPemPath'   => 'E:/project/service/124581828_20201027_cert/apiclient_cert.pem',
         'keyPemPath'    => 'E:/project/service/124581828_20201027_cert/apiclient_key.pem', */
-
-        'certPemPath'   => 'E:/project/service/admin_v2/admin_v2/public/blue/hk/cert/apiclient_cert.pem',
-        'keyPemPath'    => 'E:/project/service/admin_v2/admin_v2/public/blue/hk/cert/apiclient_key.pem',
         
         // $this->config['certPemPath'] = ConfReader::fetchSetting('wxpay.certPemPath');
         // $this->config['keyPemPath'] = ConfReader::fetchSetting('wxpay.keyPemPath');
@@ -45,11 +42,7 @@ $config = [
     // 支付宝配置
     'alipay'                           => [
         'notify_url'        => 'http://summer.blueoceantech.co/alipay/notify/notify',
-        'return_url'        => 'http://summer.blueoceantech.co/alipay/order/entry',
-        'ttg_notify_url'    => 'http://summer.blueoceantech.co/alipay/notify/ttg_notify/',
-        'easygo_notify_url' => 'http://summer.blueoceantech.co/alipay/notify/easygonotify',
-        'wantu_notify_url'  => 'http://summer.blueoceantech.co/alipay/notify/wantunotify/',
-        'wantu_return_url'  => 'http://summer.blueoceantech.co/alipay/notify/wantunotify/',
+        
     ],
     'verify_sign'                      => true,
     'app'                              => [
