@@ -41,7 +41,7 @@ $config = [
     
     // 支付宝配置
     'alipay'                           => [
-        'notify_url'        => 'http://summer.blueoceantech.co/alipay/notify/notify',
+        
         
     ],
     'verify_sign'                      => true,

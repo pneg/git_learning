@@ -11,7 +11,7 @@ $config = [
         'viewsDir' => APP_PATH . '/views/',
         'pluginsDir' => APP_PATH . '/plugins/',
         'libraryDir' => APP_PATH . '/library/',
-        'baseUri' => '/',
+        
     ],
     'models' => [
         'metadata' => [
