@@ -50,8 +50,8 @@ $config = [
         'asset_prefix' => '',
     ],
     'lang'                             => 'zh_HK',
-    'available_language'               => ['en', 'zh_CN', 'zh_HK'], /*语言包配置数组*/
-    'cache_lifetime'                   => 300,
+    'available_language'               => ['en', 'zh_CN'], /*语言包配置数组*/
+    'cache_lifetime'                   => 6500,
    
 
 ];

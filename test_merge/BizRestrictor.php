@@ -7,7 +7,7 @@ class BizRestrictor
     const JSON_FORMAT = JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES;
 
     const CONF        = [
-        'redisHost'           => '',
+        
         'redisPort'           => '',
         'redisAuth'           => '',
         'redisDbIndex'        => 0,           //Redis数据库序号
@@ -25,7 +25,7 @@ class BizRestrictor
     {
         $request = new Request();
         return [
-            'requestMethod' => $request->getMethod(),
+            
             'requestPort'   => $request->getPort(),
             'requestUrl'    => $request->getScheme() . '://' . $request->getHttpHost() . $request->getURI(),
             'clientIp'      => $request->getClientAddress(),
@@ -46,7 +46,7 @@ class BizRestrictor
             'requestUrl'    => $p['requestUrl'] ?? '',
             'clientIp'      => $p['clientIp'] ?? '',
             'rawBody'       => $p['rawBody'] ?? '',
-            'headers'       => $p['headers'] ?? '',
+            
             'referer'       => $p['referer'] ?? '',
             'userAgent'     => $p['userAgent'] ?? '',
         ], $p['logFile'], $p['logDir']);
