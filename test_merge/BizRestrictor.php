@@ -35,6 +35,35 @@ class BizRestrictor
         ];
     }
 
+    protected static function responseToUpstream(array $p)
+    {
+        self::saveToFileWithJson([
+            'time'          => date('Y-m-d H:i:s'),
+            'response'      => $p['response'] ?? '',
+            'requestMethod' => $p['requestMethod'] ?? '',
+            'requestPort'   => $p['requestPort'] ?? '',
+            'requestUrl'    => $p['requestUrl'] ?? '',
+            'clientIp'      => $p['clientIp'] ?? '',
+            'rawBody'       => $p['rawBody'] ?? '',
+            'headers'       => $p['headers'] ?? '',
+            'referer'       => $p['referer'] ?? '',
+            'userAgent'     => $p['userAgent'] ?? '',
+        ], $p['logFile'], $p['logDir']);
 
+        $contentType = 'Content-Type: text/plain;charset=utf-8';
+        $httpStatusCode = $p['response']['httpStatusCode'] ?? 200;
+        $echoText = $p['response']['bizText'];
+        if (isset($p['response']['type']) && (strtolower($p['response']['type']) === 'json')) {
+            $contentType = 'Content-Type: application/json;charset=utf-8';
+            $echoText = json_encode($echoText, self::JSON_FORMAT);
+        }
+        ob_start();
+        header($contentType);
+        header('HTTP/1.1 ' . $httpStatusCode, true, $httpStatusCode);
+        echo $echoText;
+        ob_end_flush();
+        flush();
+        exit;
+    }
 
 }

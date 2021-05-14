@@ -38,7 +38,8 @@ $config = [
         'certPemPath'   => 'E:/project/service/admin_v2/admin_v2/public/blue/hk/cert/apiclient_cert.pem',
         'keyPemPath'    => 'E:/project/service/admin_v2/admin_v2/public/blue/hk/cert/apiclient_key.pem',
         
-    
+        // $this->config['certPemPath'] = ConfReader::fetchSetting('wxpay.certPemPath');
+        // $this->config['keyPemPath'] = ConfReader::fetchSetting('wxpay.keyPemPath');
     ],
     
     // 支付宝配置
@@ -59,5 +60,6 @@ $config = [
     'available_language'               => ['en', 'zh_CN', 'zh_HK'], /*语言包配置数组*/
     'cache_lifetime'                   => 300,
    
+
 ];
 return $config;
