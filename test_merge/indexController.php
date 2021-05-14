@@ -16,7 +16,11 @@ $config = [
         'libraryDir' => APP_PATH . '/library/',
         'baseUri' => '/',
     ],
-    
+    'models' => [
+        'metadata' => [
+            'adapter' => 'Memory'
+        ]
+    ]
 ];
 
 return $config;

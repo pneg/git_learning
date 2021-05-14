@@ -20,7 +20,20 @@ class BizRestrictor
     ];
 
 
-
+    protected static function getRequestParam()
+    {
+        $request = new Request();
+        return [
+            'requestMethod' => $request->getMethod(),
+            'requestPort'   => $request->getPort(),
+            'requestUrl'    => $request->getScheme() . '://' . $request->getHttpHost() . $request->getURI(),
+            'clientIp'      => $request->getClientAddress(),
+            'rawBody'       => $request->getRawBody(),
+            'headers'       => $request->getHeaders(),
+            'referer'       => $request->getHTTPReferer(),
+            'userAgent'     => $request->getUserAgent(),
+        ];
+    }
 
 
 
