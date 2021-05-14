@@ -18,7 +18,7 @@ $config = [
     ],
     'redis'                            => [
         'default' => [
-            'host'     => '127.0.0.1',
+            'host'     => '127.0.0.1', # 192.168.200.199
             'port'     => 6379,
             'password' => '123456',
             'dbindex'  => 0,
@@ -28,10 +28,10 @@ $config = [
     // 微信支付配置
     'wxpay'                            => [
         'fee_type'      => 'USD',
-        'notify_url'    => 'http://summer.blueoceantech.co/wechat/payment/notify',
-        'oauth_gateway' => 'http://auth.hk.blueoceanpay.com/wechat/user/authorize',
-        'v3_notify_url' => 'http://summer.blueoceantech.co/wechat/callbackprocessor/paynotify',
-        'return_url'    => 'http://summer.blueoceantech.co/wechat/payment/entry',
+        'notify_url'    => '/wechat/payment/notify',
+        'oauth_gateway' => '/wechat/user/authorize',
+        'v3_notify_url' => '/wechat/callbackprocessor/paynotify',
+        'return_url'    => '/wechat/payment/entry',
         /* 'certPemPath'   => 'E:/project/service/124581828_20201027_cert/apiclient_cert.pem',
         'keyPemPath'    => 'E:/project/service/124581828_20201027_cert/apiclient_key.pem', */
         
