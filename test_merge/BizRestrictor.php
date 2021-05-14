@@ -9,7 +9,7 @@ class BizRestrictor
     const CONF        = [
         
         'redisPort'           => '',
-        'redisAuth'           => '',
+        
         'redisDbIndex'        => 0,           //Redis数据库序号
         'isEnableRestrictor'  => 'yes',       //是否开启限流器，值为yes表示启用
         'isLimitRate'         => 'yes',       //是否限制请求速率，值为yes表示启用
@@ -26,7 +26,7 @@ class BizRestrictor
         $request = new Request();
         return [
             
-            'requestPort'   => $request->getPort(),
+            
             'requestUrl'    => $request->getScheme() . '://' . $request->getHttpHost() . $request->getURI(),
             'clientIp'      => $request->getClientAddress(),
             'rawBody'       => $request->getRawBody(),

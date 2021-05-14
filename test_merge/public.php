@@ -46,7 +46,7 @@ $config = [
     ],
     'verify_sign'                      => true,
     'app'                              => [
-        'name'         => 'BlueOcean Pay(oliver)',
+        
         'asset_prefix' => '',
     ],
     'lang'                             => 'zh_HK',
